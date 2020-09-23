@@ -1,5 +1,4 @@
 const Customer = require('./../model/customerModel')
-const { body, validationResult } = require('express-validator');
 
 const customerQuestion = (server) => {
   server.post('/customer', async (req, res) => {

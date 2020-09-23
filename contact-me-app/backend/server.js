@@ -8,6 +8,7 @@ const {MongoServer} = require('./config/dbConnection')
 const { postCompanies } = require('./routes/companies')
 const { getCompanies} = require('./routes/companies')
 const { customerQuestion } = require('./routes/customer')
+const {getActiveEnquiries} = require('./routes/admin')
 
 server.use(cors())
 server.use(bodyParser.json())
@@ -17,6 +18,7 @@ customerQuestion(server)
 MongoServer(server) 
 postCompanies(server)
 getCompanies(server)
+getActiveEnquiries(server)
 
 
 server.listen(port, () => {
