@@ -23,17 +23,19 @@ function CompanyInformation () {
       <div class="input-group">
         <input type='text' placeholder='name' name="name" class="form-control"
           value={credentials.name}
+          required
           onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} />
           </div>
         <br />
         <div class="input-group">
         <input type='text' placeholder='Surname' name="surname" class="form-control"
-          value={credentials.surname}
+          value={credentials.surname} required
           onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} />
           </div>
         <br />
         <div class="input-group">
         <input type='number' placeholder='Mobile Number' name="Mobile_Number" class="form-control"
+        required
           value={credentials.Mobile_Number}
           onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} />
           </div>
@@ -41,6 +43,7 @@ function CompanyInformation () {
         <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         <input type='email' placeholder='email address' name="email" class="form-control"
+        required
           value={credentials.email}
           onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} />
           </div>
@@ -48,6 +51,7 @@ function CompanyInformation () {
         <div class="form-group">
         <label for="question">Question:</label>
         <textarea placeholder='post your question' name="Question"
+        required
           value={credentials.Question} class="form-control" rows="5" id="question"
           onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} />
           </div>

@@ -16,7 +16,7 @@ function Companies() {
 
   return (
     <div>
-      <h1>Companies</h1>
+      <h1> Registered Companies</h1>
       {companyDetails.map(information =><div>
         <h1><a href='/customer'>{information.name}</a></h1>
         <h3>website_address: {information.website_address}</h3>

@@ -26,7 +26,8 @@ function DisplayDetails () {
               <div class="col"> <input type="name" class="form-control"
                 name="name"
                 value={credentials.name}
-                placeholder="enter your name"
+                placeholder="enter name"
+                required
                 onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} /></div>
             </div>
           </div>
@@ -37,6 +38,7 @@ function DisplayDetails () {
               name="website_address"
               value={credentials.website_address}
               placeholder="enter your website address"
+              required
               onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} />
           </div>
           <br />
@@ -46,12 +48,14 @@ function DisplayDetails () {
               name="email"
               value={credentials.email}
               placeholder=" enter email"
+              required
               onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} />
           </div>
           <br />
           <div class="form-group">
           <input name="Phone_Number"
               class="form-control"
+              required
             value={credentials.Phone_Number} type="number" placeholder="Phone_Number"
             onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} />
           </div>
@@ -60,14 +64,16 @@ function DisplayDetails () {
             <input name="physical_address"
               class="form-control"
               value={credentials.physical_address}
+              required
               type="text" onChange={(e) => setCredentials({ ...credentials, [e.target.name]: e.target.value })} placeholder="physical_address" />
           </div>
           <br />
           <div class="form-group">
-           <input class="btn btn-success btn-lg btn-block" type="submit" />
+          <input class="btn btn-success btn-lg btn-block" type="submit" />
           </div>
         </form>
-           <a href='/company'>view companies</a>
+        <a href='/company'>View Registered Companies</a>
+          
       </div>
     </div>
   )
